@@ -1,0 +1,18 @@
+
+// Driver (*) <-----> (*) Car
+// A many-to-many relationship
+// A Driver can drive many cars, but a Car can also have many drivers.
+entity Student {
+	firstname String,
+    lastName String
+    school String
+}
+entity Category {
+	language String,
+    question String,
+    answer String
+}
+relationship ManyToMany {
+  Student{category} to Category{student}
+}
+
